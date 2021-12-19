@@ -8,6 +8,7 @@
   --titleBorder: 1px solid #3431e4;
   --internalPaddingBig: 15px;
   --internalPaddingSmall: 5px;
+  --svgMargin: 20px;
 }
 
 /* General labels */
@@ -16,7 +17,7 @@ body {
 }
 
 h1 {
-  margin-top: 0;
+  margin-top: 5px;
   display: inline-block;
   border: var(--titleBorder);
   width: 80%;
@@ -41,9 +42,18 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #000;
+}
+
 p {
-  margin: 7px 0;
+  margin: 12px 0;
   font-weight: 400;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Page wrapper */
@@ -54,9 +64,9 @@ p {
   height: 100vh;
   width: 100%;
   grid-template-areas:
-    "essentials aboutMe aboutMe"
-    "essentials aboutMe aboutMe"
-    "languajes technologies skills";
+    "essentials aboutMe aboutMe aboutMe aboutMe aboutMe aboutMe"
+    "essentials aboutMe aboutMe aboutMe aboutMe aboutMe aboutMe"
+    "languajes technologies technologies technologies skills skills skills";
   gap: var(--areaPadding);
 }
 
@@ -79,6 +89,54 @@ p {
 .essentials .imageContainer .profile {
   width: 50%;
   border-radius: 50%;
+  margin: 20px 0;
+}
+
+.essentials .essentials-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.essentials .essentials-container .location {
+  display: flex;
+}
+
+.essentials .essentials-container .location .location-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--svgMargin);
+}
+
+.essentials .essentials-container .phone {
+  display: flex;
+}
+
+.essentials .essentials-container .phone .phone-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--svgMargin);
+}
+
+.essentials .essentials-container .github {
+  display: flex;
+}
+
+.essentials .essentials-container .github .github-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--svgMargin);
+}
+
+.essentials .essentials-container .email {
+  display: flex;
+}
+
+.essentials .essentials-container .email .email-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--svgMargin);
 }
 
 /* About me */
