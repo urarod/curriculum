@@ -1,6 +1,11 @@
 /* Font: Inconsolata */
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Indie+Flower&display=swap");
 
+:root {
+  --areaPadding: 30px;
+}
+
+/* General labels */
 body {
   font-family: "Inconsolata", monospace;
 }
@@ -8,4 +13,48 @@ body {
 h1,
 h2 {
   text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Page wrapper */
+.wrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+    "essentials aboutMe aboutMe"
+    "essentials aboutMe aboutMe"
+    "languajes technologies skills";
+}
+
+/* Essentials */
+.essentials {
+  grid-area: essentials;
+  padding: var(--areaPadding);
+}
+
+/* About me */
+.aboutMe {
+  grid-area: aboutMe;
+  padding: var(--areaPadding);
+}
+
+/* Languajes */
+.languajes {
+  grid-area: languajes;
+  padding: var(--areaPadding);
+}
+
+/* Technologies */
+.technologies {
+  grid-area: technologies;
+  padding: var(--areaPadding);
+}
+
+/* Skills */
+.skills {
+  grid-area: skills;
+  padding: var(--areaPadding);
 }
