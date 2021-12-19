@@ -3,11 +3,33 @@
 
 :root {
   --areaPadding: 30px;
+  --areaBorderRadius: 25px;
+  --areaBorder: 1px solid #000;
+  --titleBorder: 1px solid #3431e4;
+  --internalPaddingBig: 15px;
+  --internalPaddingSmall: 5px;
 }
 
 /* General labels */
 body {
   font-family: "Inconsolata", monospace;
+}
+
+h1 {
+  margin-top: 0;
+  display: inline-block;
+  border: var(--titleBorder);
+  width: 80%;
+  text-align: center;
+  font-weight: 700;
+}
+
+h2 {
+  display: inline-block;
+  border: var(--titleBorder);
+  width: 90%;
+  text-align: center;
+  font-weight: 700;
 }
 
 h1,
@@ -19,42 +41,101 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 7px 0;
+  font-weight: 400;
+}
+
 /* Page wrapper */
 .wrapper {
   display: grid;
-  min-height: 100vh;
+  box-sizing: border-box;
+  padding: var(--areaPadding);
+  height: 100vh;
+  width: 100%;
   grid-template-areas:
     "essentials aboutMe aboutMe"
     "essentials aboutMe aboutMe"
     "languajes technologies skills";
+  gap: var(--areaPadding);
 }
 
 /* Essentials */
 .essentials {
   grid-area: essentials;
-  padding: var(--areaPadding);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: var(--areaBorder);
+  border-radius: var(--areaBorderRadius);
+}
+
+.essentials .imageContainer {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.essentials .imageContainer .profile {
+  width: 50%;
+  border-radius: 50%;
 }
 
 /* About me */
 .aboutMe {
   grid-area: aboutMe;
-  padding: var(--areaPadding);
+  border: var(--areaBorder);
+  border-radius: var(--areaBorderRadius);
+  padding: var(--internalPaddingBig);
+}
+
+.aboutMe main {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMe h1 {
+  align-self: center;
 }
 
 /* Languajes */
 .languajes {
   grid-area: languajes;
-  padding: var(--areaPadding);
+  border: var(--areaBorder);
+  border-radius: var(--areaBorderRadius);
+  padding: var(--internalPaddingSmall);
+  display: flex;
+  flex-direction: column;
+}
+
+.languajes h2 {
+  align-self: center;
 }
 
 /* Technologies */
 .technologies {
   grid-area: technologies;
-  padding: var(--areaPadding);
+  border: var(--areaBorder);
+  border-radius: var(--areaBorderRadius);
+  padding: var(--internalPaddingSmall);
+  display: flex;
+  flex-direction: column;
+}
+
+.technologies h2 {
+  align-self: center;
 }
 
 /* Skills */
 .skills {
   grid-area: skills;
-  padding: var(--areaPadding);
+  border: var(--areaBorder);
+  border-radius: var(--areaBorderRadius);
+  padding: var(--internalPaddingSmall);
+  display: flex;
+  flex-direction: column;
+}
+
+.skills h2 {
+  align-self: center;
 }
