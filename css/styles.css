@@ -70,7 +70,7 @@ svg {
   grid-template-areas:
     "essentials aboutMe aboutMe aboutMe aboutMe aboutMe aboutMe"
     "essentials aboutMe aboutMe aboutMe aboutMe aboutMe aboutMe"
-    "languajes technologies technologies technologies skills skills skills";
+    "languajes technologies technologies technologies experience experience experience";
   gap: var(--areaPadding);
 }
 
@@ -224,14 +224,14 @@ svg {
 }
 
 .technologies-wrapper .technology-entry .technology-icon {
-  margin: 0 0 7px 0;
+  margin: 0 0 5px 0;
   width: 40px;
   height: 40px;
 }
 
 /* Skills */
-.skills {
-  grid-area: skills;
+.experience {
+  grid-area: experience;
   border: var(--areaBorder);
   border-radius: var(--areaBorderRadius);
   padding: var(--internalPaddingSmall);
@@ -243,6 +243,6 @@ svg {
   -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
-.skills h2 {
+.experience h2 {
   align-self: center;
 }
