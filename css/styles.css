@@ -10,7 +10,7 @@
   --svgMargin: 20px;
 
   /* Elements */
-  --titleBorder: 1px solid #3431e4;
+  --titleBorder: 2px solid #9bf6ff;
   --areaBorder: 1px solid #000;
 
   /* colors */
@@ -27,26 +27,18 @@ body {
 
 h1 {
   margin-top: 5px;
-  display: inline-block;
-  border: var(--titleBorder);
-  width: 80%;
-  text-align: center;
-  font-weight: 700;
-  background-color: #ffadad;
-}
-
-h2 {
-  display: inline-block;
-  border: var(--titleBorder);
-  width: 90%;
-  text-align: center;
-  font-weight: 700;
-  background-color: #ffadad;
 }
 
 h1,
 h2 {
+  display: inline-block;
   text-transform: uppercase;
+  width: 80%;
+  font-weight: 700;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #ffadad;
+  border: var(--titleBorder);
 }
 
 a {
@@ -117,6 +109,7 @@ svg {
 
 .essentials .essentials-container .location {
   display: flex;
+  align-items: center;
 }
 
 .essentials .essentials-container .location .location-icon {
@@ -127,6 +120,7 @@ svg {
 
 .essentials .essentials-container .phone {
   display: flex;
+  align-items: center;
 }
 
 .essentials .essentials-container .phone .phone-icon {
@@ -137,6 +131,7 @@ svg {
 
 .essentials .essentials-container .github {
   display: flex;
+  align-items: center;
 }
 
 .essentials .essentials-container .github .github-icon {
@@ -147,6 +142,7 @@ svg {
 
 .essentials .essentials-container .email {
   display: flex;
+  align-items: center;
 }
 
 .essentials .essentials-container .email .email-icon {
@@ -218,6 +214,19 @@ svg {
 
 .technologies h2 {
   align-self: center;
+}
+
+.technologies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 100%;
+  place-items: center;
+}
+
+.technologies-wrapper .technology-entry .technology-icon {
+  margin: 0 0 7px 0;
+  width: 40px;
+  height: 40px;
 }
 
 /* Skills */
