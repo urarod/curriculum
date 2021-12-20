@@ -12,6 +12,7 @@
   /* Elements */
   --titleBorder: 2px solid #9bf6ff;
   --areaBorder: 1px solid #000;
+  --areaBoxShadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 
   /* colors */
   --mainBackground: #9bf6ff;
@@ -83,9 +84,10 @@ svg {
   border: var(--areaBorder);
   border-radius: var(--areaBorderRadius);
   background-color: #caffbf;
-  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  padding: var(--internalPaddingSmall);
+  box-shadow: var(--areaBoxShadow);
+  -webkit-box-shadow: var(--areaBoxShadow);
+  -moz-box-shadow: var(--areaBoxShadow);
 }
 
 .essentials .imageContainer {
@@ -158,9 +160,9 @@ svg {
   border-radius: var(--areaBorderRadius);
   padding: var(--internalPaddingBig);
   background-color: #caffbf;
-  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--areaBoxShadow);
+  -webkit-box-shadow: var(--areaBoxShadow);
+  -moz-box-shadow: var(--areaBoxShadow);
 }
 
 .aboutMe main {
@@ -181,9 +183,9 @@ svg {
   display: flex;
   flex-direction: column;
   background-color: #caffbf;
-  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--areaBoxShadow);
+  -webkit-box-shadow: var(--areaBoxShadow);
+  -moz-box-shadow: var(--areaBoxShadow);
 }
 
 .languajes h2 {
@@ -214,9 +216,9 @@ svg {
   display: flex;
   flex-direction: column;
   background-color: #caffbf;
-  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--areaBoxShadow);
+  -webkit-box-shadow: var(--areaBoxShadow);
+  -moz-box-shadow: var(--areaBoxShadow);
 }
 
 .technologies h2 {
@@ -245,9 +247,9 @@ svg {
   display: flex;
   flex-direction: column;
   background-color: #caffbf;
-  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--areaBoxShadow);
+  -webkit-box-shadow: var(--areaBoxShadow);
+  -moz-box-shadow: var(--areaBoxShadow);
 }
 
 .experience h2 {
@@ -261,4 +263,129 @@ svg {
 .experience .experience-wrapper .experience-entry .experience-title span {
   font-weight: 300;
   font-size: 13px;
+}
+
+@media (min-width: 1300px) {
+  h1,
+  h2 {
+    font-size: 40px;
+  }
+
+  p,
+  h3,
+  span {
+    font-size: 20px;
+  }
+
+  .essentials .imageContainer .profile {
+    width: 75%;
+  }
+
+  .technologies-wrapper .technology-entry .technology-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .experience .experience-wrapper .experience-entry .experience-title span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    /* sizes */
+    --areaPadding: 15px;
+    --internalPaddingBig: 8px;
+    --internalPaddingSmall: 5px;
+    --svgMargin: 10px;
+
+    /* Elements */
+    --areaBoxShadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .wrapper {
+    grid-template-areas:
+      "essentials aboutMe aboutMe aboutMe"
+      "essentials aboutMe aboutMe aboutMe"
+      "languajes technologies experience experience";
+  }
+
+  .technologies-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper {
+    grid-template-areas:
+      "essentials essentials"
+      "aboutMe aboutMe"
+      "languajes technologies"
+      "experience experience";
+  }
+
+  .essentials {
+    flex-direction: row;
+  }
+
+  .essentials .imageContainer {
+    width: 60%;
+  }
+
+  .essentials .imageContainer .profile {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .essentials .imageContainer {
+    width: 100%;
+  }
+  .essentials .imageContainer .profile {
+    width: 90%;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    /* sizes */
+    --areaPadding: 12px;
+    --internalPaddingBig: 8px;
+    --internalPaddingSmall: 9px;
+    --svgMargin: 5px;
+
+    /* Elements */
+    --areaBoxShadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .wrapper {
+    grid-template-areas:
+      "essentials "
+      "aboutMe "
+      "languajes"
+      "technologies"
+      "experience";
+  }
+
+  .technologies-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .technologies-wrapper .technology-entry .technology-icon {
+    margin: 0 0 15px 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .essentials {
+    flex-direction: column;
+  }
+
+  .essentials .imageContainer .profile {
+    width: 70%;
+  }
 }
