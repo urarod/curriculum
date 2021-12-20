@@ -265,7 +265,7 @@ svg {
   font-size: 13px;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1370px) {
   h1,
   h2 {
     font-size: 40px;
