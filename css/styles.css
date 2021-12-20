@@ -2,18 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Indie+Flower&display=swap");
 
 :root {
+  /* sizes */
   --areaPadding: 30px;
   --areaBorderRadius: 25px;
-  --areaBorder: 1px solid #000;
-  --titleBorder: 1px solid #3431e4;
   --internalPaddingBig: 15px;
-  --internalPaddingSmall: 5px;
+  --internalPaddingSmall: 7px;
   --svgMargin: 20px;
+
+  /* Elements */
+  --titleBorder: 1px solid #3431e4;
+  --areaBorder: 1px solid #000;
+
+  /* colors */
+  --mainBackground: #9bf6ff;
+  --linkColor: #fffffc;
+  --areaBackground: #caffbf;
 }
 
 /* General labels */
 body {
   font-family: "Inconsolata", monospace;
+  background-color: var(--mainBackground);
 }
 
 h1 {
@@ -23,6 +32,7 @@ h1 {
   width: 80%;
   text-align: center;
   font-weight: 700;
+  background-color: #ffadad;
 }
 
 h2 {
@@ -31,6 +41,7 @@ h2 {
   width: 90%;
   text-align: center;
   font-weight: 700;
+  background-color: #ffadad;
 }
 
 h1,
@@ -40,6 +51,7 @@ h2 {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 a:visited {
@@ -78,6 +90,10 @@ svg {
   flex-direction: column;
   border: var(--areaBorder);
   border-radius: var(--areaBorderRadius);
+  background-color: #caffbf;
+  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
 .essentials .imageContainer {
@@ -145,6 +161,10 @@ svg {
   border: var(--areaBorder);
   border-radius: var(--areaBorderRadius);
   padding: var(--internalPaddingBig);
+  background-color: #caffbf;
+  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
 .aboutMe main {
@@ -164,10 +184,22 @@ svg {
   padding: var(--internalPaddingSmall);
   display: flex;
   flex-direction: column;
+  background-color: #caffbf;
+  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
 .languajes h2 {
   align-self: center;
+}
+
+.languajes .languaje-entry .languaje-title {
+  font-weight: 700;
+}
+
+.languajes .languaje-entry .languaje-text {
+  font-weight: 400;
 }
 
 /* Technologies */
@@ -178,6 +210,10 @@ svg {
   padding: var(--internalPaddingSmall);
   display: flex;
   flex-direction: column;
+  background-color: #caffbf;
+  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
 .technologies h2 {
@@ -192,6 +228,10 @@ svg {
   padding: var(--internalPaddingSmall);
   display: flex;
   flex-direction: column;
+  background-color: #caffbf;
+  box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
 .skills h2 {
